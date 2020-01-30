@@ -86,3 +86,34 @@ buttonX.addEventListener('click', function updateReadout() {
     let newReadout = document.createTextNode('*')
     currentReadout.append(newReadout)
 })
+
+let buttonDivi = document.querySelector('.divide')
+buttonDivi.addEventListener('click', function updateReadout() {
+    let currentReadout = document.querySelector('.readout-text')
+    let newReadout = document.createTextNode('/')
+    currentReadout.append(newReadout)
+})
+
+let buttonAdd = document.querySelector('.add')
+buttonAdd.addEventListener('click', function updateReadout() {
+    let currentReadout = document.querySelector('.readout-text')
+    let newReadout = document.createTextNode('+')
+    currentReadout.append(newReadout)
+})
+
+let buttonEq = document.querySelector('.equals')
+buttonEq.addEventListener('click', function updateReadout() {
+    let currentReadout = document.querySelector('.readout-text')
+    let readout = currentReadout.innerText
+    let ans = eval(readout)
+    currentReadout.innerHTML = ans
+})
+
+let buttonDec = document.querySelector('.decimal')
+buttonDec.addEventListener('click', function updateReadout() {
+    let currentReadout = document.querySelector('.readout-text')
+    let newReadout = document.createTextNode('.')
+    currentReadout.append(newReadout)
+})
+
+let currReadout = document.querySelector('.readout-text')
